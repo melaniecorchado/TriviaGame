@@ -5,14 +5,12 @@
 	<title>Pirates Trivia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 		<script src="assets/javascript/app.js"></script>
 </head>
 
 		<header>
 			<h1>Pirates Trivia</h1>
-			<!--<h2>Yo Ho Yo Ho A Pirates Life For Me</h2>-->
 		</header>
 
 <body>
@@ -23,59 +21,57 @@
 				<p>Avast ye to the questions for some might be tricky. Good luck matey!</p>
 			</div>
 			
-		<!--<button type="button" class="btn btn-warning">Start</button>-->
+			<button type="button" id="startButton">Click Here To Start</button>
 
-			<br>
+			<br><br>
 	
 	
-	<div id="Trivia">
-
-		<div id="question">
+	<div id="Trivia" class="hide">
 				
-
-		</div>
-
+			<p id="questions"></p>
 				<form id="form1">
-				  <input type="checkbox" name="question1" value="a"><p id="answer1"></p>
-				  <br><br>
-				  <input type="checkbox" name="question1" value="b"><p id="answer2"></p>
-				  <br><br>
-				  <input type="checkbox" name="question1" value="c"><p id="answer3"></p>
+				  <input type="checkbox" name="question1" id="a1"><p id="answer1"></p>
+				  <input type="checkbox" name="question1" id="a2"><p id="answer2"></p>
+				  <input type="checkbox" name="question1" id="a3"><p id="answer3"></p>
 				</form>
 
 				<br>
 
+				<p id="questions2"></p>
 				<form id="form2">
-				  <input type="checkbox" name="question1" value="a"><p id="answer2.1"></p>
-				  <br><br>
-				  <input type="checkbox" name="question1" value="b"><p id="answer2.2"></p>
-				  <br><br>
-				  <input type="checkbox" name="question1" value="c"><p id="answer2.3"></p>
+				  <input type="checkbox" name="question1" id="a21"><p id="answer21"></p>
+				  <input type="checkbox" name="question1" id="a22"><p id="answer22"></p>
+				  <input type="checkbox" name="question1" id="a23"><p id="answer23"></p>
 				</form>
 
-		<!--		<form>
-				  <input type="checkbox" name="question1" value="a" id="form3"><br><br>
-				  <input type="checkbox" name="question1" value="b" id="form3"><br><br>
-				  <input type="checkbox" name="question1" value="c" id="form3">
+				<br>
+				
+				<p id="questions3"></p>
+				<form id="form3">
+				  <input type="checkbox" name="question1" id="a31"><p id="answer31"></p>
+				  <input type="checkbox" name="question1" id="a32"><p id="answer32"></p>
+				  <input type="checkbox" name="question1" id="a33"><p id="answer33"></p>
 				</form>
 
-				<form>
-				  <input type="checkbox" name="question1" value="a" id="form4"><br><br>
-				  <input type="checkbox" name="question1" value="b" id="form4"><br><br>
-				  <input type="checkbox" name="question1" value="c" id="form4">
+				<br>
+		
+				<p id="questions4"></p>
+				<form id="form4">
+				  <input type="checkbox" name="question1" id="a41"><p id="answer41"></p>
+				  <input type="checkbox" name="question1" id="a42"><p id="answer42"></p>
+				  <input type="checkbox" name="question1" id="a43"><p id="answer43"></p>
 				</form>
 
-				<form>
-				  <input type="checkbox" name="question1" value="a" id="form5"><br><br>
-				  <input type="checkbox" name="question1" value="b" id="form5"><br><br>
-				  <input type="checkbox" name="question1" value="c" id="form5">
+				<br>
+			
+				<p id="questions5"></p>
+				<form id="form5">
+				  <input type="checkbox" name="question1" id="a51"><p id="answer51"></p>
+				  <input type="checkbox" name="question1" id="a52"><p id="answer52"></p>
+				  <input type="checkbox" name="question1" id="a53"><p id="answer53"></p>
 				</form>
 
-				<form>
-				  <input type="checkbox" name="question1" value="a" id="form1"><br><br>
-				  <input type="checkbox" name="question1" value="b" id="form1"><br><br>
-				  <input type="checkbox" name="question1" value="c" id="form1">
-				</form> -->
+				<br>
 
 			</div>
 		</div>

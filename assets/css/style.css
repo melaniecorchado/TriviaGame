@@ -2,7 +2,8 @@ body{
 	margin: auto;
 	padding: 0;
 	background-image: url("../images/bones.jpg");
-	background-repeat: no-repeat;
+	height: 1080px;
+	overflow: scroll;
 	width: 960px;
 
 }
@@ -25,8 +26,15 @@ p {
 }
 
 button {
+	margin-left: 435px;
 
 }
+
+
+.hide {
+	display: none;
+}
+
 
 #question {
 	height: 150px;
