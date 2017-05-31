@@ -1,0 +1,34 @@
+body{
+	margin: auto;
+	padding: 0;
+	background-image: url("../images/bones.jpg");
+	background-repeat: no-repeat;
+	width: 960px;
+
+}
+
+header {
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	color: white;
+	text-align: center;
+}
+
+p {
+	color: white;
+	text-align: center;
+	font-size: 15px;
+	width: 960px;
+}
+
+button {
+
+}
+
+#question {
+	height: 150px;
+	width: 200px;
+}
