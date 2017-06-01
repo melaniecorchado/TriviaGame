@@ -2,6 +2,7 @@ $(document).ready(function(){
 //global varaibles 
 var correctAnswer = 0; 
 var incorrectAnswer = 0; 
+var audio =("assets/song/pirates.mp3");
 
 //below you will find the questions
 var trivia = {
@@ -16,7 +17,7 @@ var trivia = {
 		},
 	questions2:
 		{   question2 : "Who's blood did Barbossa need to release the curse?",
-			answer : "Will Turner",
+			answer :  "Will Turner",
 			answer21: "Elizabeth Swan", 
 			answer22: "Will Turner", 
 			answer23: "His Own",
@@ -24,7 +25,7 @@ var trivia = {
 		},
 	questions3:
 		{   question3 : "Who is the villain in Dead Man's Chest?",
-			answer : "Davy Jones",
+			answer :  "Davy Jones",
 			answer31: "James Norrington", 
 			answer32: "Davy Jones",
 			answer33: "Captian Barbossa", 
@@ -32,7 +33,7 @@ var trivia = {
 		},
 	questions4: 
 		{   question4 : "Who is Jacks right hand?",
-			answer : "Gibbs",
+			answer :  "Gibbs",
 			answer41: "Gibbs",
 			answer42: "Captian Hook",
 			answer43: "Blackbeard",
@@ -40,7 +41,7 @@ var trivia = {
 		},
 	questions5:
 		{   question5 : "Jacks compass doesn't point in which direction?",
-			answer : "North",
+			answer :  "North",
 			answer51: "East",
 			answer52: "North",
 			answer53: "South",
@@ -50,6 +51,7 @@ var trivia = {
 
 $("#startButton").click(function(){
 	start();
+
 });
 
 //function to start the game
@@ -57,13 +59,15 @@ $("#startButton").click(function(){
 function start() {
 	$("#Trivia").toggleClass("hide");
 	$("#startButton").toggleClass("hide");
-	setTimeout(end, 10000);
+
+	setTimeout(end, 1000 * 20);
 }
 show();
 //function to end the game 
 function end(){
 	alert("Time's up mateys!");
 	$("#Trivia").toggleClass("hide");
+	$("#score").toggleClass("hide");
 	check();
 }
 //this is where the questions and choices willl be displayed
@@ -155,7 +159,7 @@ function check(){
   	correctAnswer++;
   }
 
-  else if(triva.questions2.userGuess!=trivia.question2.answer){
+  else if(trivia.questions2.userGuess!=trivia.questions2.answer){
   	incorrectAnswer++;
   }
 
@@ -163,7 +167,7 @@ if(trivia.questions3.userGuess==trivia.questions3.answer){
   	correctAnswer++;
   }
 
- else if(trivia.questions3.userGuess!=trivia.question3.answer){
+ else if(trivia.questions3.userGuess!=trivia.questions3.answer){
  	incorrectAnswer++;
  }
 
@@ -171,7 +175,7 @@ if(trivia.questions4.userGuess==trivia.questions4.answer){
   	correctAnswer++;
   }
 
-  else if(trivia.questions4.userGuess!=trivia.question4.answer){
+  else if(trivia.questions4.userGuess!=trivia.questions4.answer){
   	incorrectAnswer++;
   }
 
@@ -179,17 +183,25 @@ if(trivia.questions5.userGuess==trivia.questions5.answer){
   	correctAnswer++;
   }
 
-  else if(trivia.questions5.userGuess!=trivia.question5.answer){
+  else if(trivia.questions5.userGuess!=trivia.questions5.answer){
   	incorrectAnswer++;
   }
 
-
+Correct();
+Incorrect();
 }
 
+function Correct(){
+	//reset();
+	document.getElementById("correct").innerHTML=correctAnswer;
+}
 
+function Incorrect(){
+	//reset();
+	document.getElementById("incorrect").innerHTML=incorrectAnswer;
+}
 //function reset(){
 //	clearInterval(intervalId);
 //}
-
 
 });

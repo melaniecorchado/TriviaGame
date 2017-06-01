@@ -5,15 +5,9 @@ body{
 	height: 1080px;
 	overflow: scroll;
 	width: 960px;
-
 }
 
 header {
-	color: white;
-	text-align: center;
-}
-
-h2 {
 	color: white;
 	text-align: center;
 }
@@ -23,6 +17,7 @@ p {
 	text-align: center;
 	font-size: 15px;
 	width: 960px;
+	font-weight: bold;
 }
 
 button {
@@ -39,5 +34,6 @@ button {
 }
 
 #score {
-	
+color: white;
+
 }
