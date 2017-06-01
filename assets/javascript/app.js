@@ -6,42 +6,42 @@ var audio =("assets/song/pirates.mp3");
 
 //below you will find the questions
 var trivia = {
-	questions : 
+	questions: 
 		{
-			question1 : "What is the name of the ship that Sparrow is trying to get back?",
-			answer : "The Black Pearl",
+			question1: "What is the name of the ship that Sparrow is trying to get back?",
+			answer: "The Black Pearl",
 			answer1: "The Kracken",
 			answer2: "The Flying Dutchman", 
 			answer3: "The Black Pearl",
 			userGuess: "",			
 		},
 	questions2:
-		{   question2 : "Who's blood did Barbossa need to release the curse?",
-			answer :  "Will Turner",
+		{   question2: "Who's blood did Barbossa need to release the curse?",
+			answer:  "Will Turner",
 			answer21: "Elizabeth Swan", 
 			answer22: "Will Turner", 
 			answer23: "His Own",
 			userGuess: "",			
 		},
 	questions3:
-		{   question3 : "Who is the villain in Dead Man's Chest?",
-			answer :  "Davy Jones",
+		{   question3: "Who is the villain in Dead Man's Chest?",
+			answer: "Davy Jones",
 			answer31: "James Norrington", 
 			answer32: "Davy Jones",
 			answer33: "Captian Barbossa", 
 			userGuess: "",		
 		},
 	questions4: 
-		{   question4 : "Who is Jacks right hand?",
-			answer :  "Gibbs",
+		{   question4: "Who is Jacks right hand?",
+			answer: "Gibbs",
 			answer41: "Gibbs",
 			answer42: "Captian Hook",
 			answer43: "Blackbeard",
 			userGuess: "",
 		},
 	questions5:
-		{   question5 : "Jacks compass doesn't point in which direction?",
-			answer :  "North",
+		{   question5: "Jacks compass doesn't point in which direction?",
+			answer: "North",
 			answer51: "East",
 			answer52: "North",
 			answer53: "South",
@@ -59,15 +59,17 @@ $("#startButton").click(function(){
 function start() {
 	$("#Trivia").toggleClass("hide");
 	$("#startButton").toggleClass("hide");
-
-	setTimeout(end, 1000 * 10);
+	setTimeout(end, 1000 * 20);
+	getAnswers();
 }
+
 show();
 //function to end the game 
 function end(){
 	alert("Time's up mateys!");
 	$("#Trivia").toggleClass("hide");
 	$("#score").toggleClass("hide");
+
 	check();
 }
 //this is where the questions and choices willl be displayed
@@ -109,40 +111,40 @@ function getAnswers(){
   	trivia.questions.userGuess=trivia.questions.answer3;
   });	 
     $("#a21").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer21; 
+  	trivia.questions2.userGuess=trivia.questions2.answer21; 
   }); 
      $("#a22").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer22;
+  	trivia.questions2.userGuess=trivia.questions2.answer22;
   }); 
      $("#a23").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer23; 
+  	trivia.questions2.userGuess=trivia.questions2.answer23; 
   });   
      $("#a31").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer31;
+  	trivia.questions3.userGuess=trivia.questions3.answer31;
   });
    $("#a32").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer32;
+  	trivia.questions3.userGuess=trivia.questions3.answer32;
   });	 
     $("#a33").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer33;
+  	trivia.questions3.userGuess=trivia.questions3.answer33;
   });	 
     $("#a41").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer41;
+  	trivia.questions4.userGuess=trivia.questions4.answer41;
   });	
   $("#a42").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer42;
+  	trivia.questions4.userGuess=trivia.questions4.answer42;
   }); 
   $("#a43").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer43;
+  	trivia.questions4.userGuess=trivia.questions4.answer43;
   });
   $("#a51").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer51;
+  	trivia.questions5.userGuess=trivia.questions5.answer51;
   });
   $("#a52").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer52;
+  	trivia.questions5.userGuess=trivia.questions5.answer52;
   });
   $("#a53").click(function(){	
-  	trivia.questions.userGuess=trivia.questions.answer53;
+  	trivia.questions5.userGuess=trivia.questions5.answer53;
   });
 }
 
@@ -150,28 +152,24 @@ function check(){
   if(trivia.questions.userGuess==trivia.questions.answer){
   	correctAnswer++;
   }
-
   else if(trivia.questions.userGuess!=trivia.questions.answer){
   	incorrectAnswer++;
   }
-
   if(trivia.questions2.userGuess==trivia.questions2.answer){
   	correctAnswer++;
   }
-
   else if(trivia.questions2.userGuess!=trivia.questions2.answer){
   	incorrectAnswer++;
   }
 
-if(trivia.questions3.userGuess==trivia.questions3.answer){
+ if(trivia.questions3.userGuess==trivia.questions3.answer){
   	correctAnswer++;
   }
-
  else if(trivia.questions3.userGuess!=trivia.questions3.answer){
  	incorrectAnswer++;
  }
 
-if(trivia.questions4.userGuess==trivia.questions4.answer){
+ if(trivia.questions4.userGuess==trivia.questions4.answer){
   	correctAnswer++;
   }
 
@@ -179,7 +177,7 @@ if(trivia.questions4.userGuess==trivia.questions4.answer){
   	incorrectAnswer++;
   }
 
-if(trivia.questions5.userGuess==trivia.questions5.answer){
+ if(trivia.questions5.userGuess==trivia.questions5.answer){
   	correctAnswer++;
   }
 
