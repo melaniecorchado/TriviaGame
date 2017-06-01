@@ -2,7 +2,7 @@ $(document).ready(function(){
 //global varaibles 
 var correctAnswer = 0; 
 var incorrectAnswer = 0; 
-var audio =("assets/song/pirates.mp3");
+//var audio =("assets/song/pirates.mp3");
 
 //below you will find the questions
 var trivia = {
@@ -51,11 +51,9 @@ var trivia = {
 
 $("#startButton").click(function(){
 	start();
-
 });
 
 //function to start the game
-
 function start() {
 	$("#Trivia").toggleClass("hide");
 	$("#startButton").toggleClass("hide");
@@ -69,8 +67,15 @@ function end(){
 	alert("Time's up mateys!");
 	$("#Trivia").toggleClass("hide");
 	$("#score").toggleClass("hide");
-
+	console.log(correctAnswer);
+	console.log(incorrectAnswer);
 	check();
+	if(correctAnswer > incorrectAnswer) {
+		$("#gif").html("<img src='assets/images/hat.gif'>");
+	}
+	else{
+		$("#gif").html("<img src='assets/images/scream.gif'>");
+	}
 }
 //this is where the questions and choices willl be displayed
 function show() {
@@ -147,7 +152,7 @@ function getAnswers(){
   	trivia.questions5.userGuess=trivia.questions5.answer53;
   });
 }
-
+//function to check for correct and incorrect answers
 function check(){
   if(trivia.questions.userGuess==trivia.questions.answer){
   	correctAnswer++;

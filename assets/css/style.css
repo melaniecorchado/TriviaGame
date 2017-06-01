@@ -16,7 +16,7 @@ header {
 p {
 	color: white;
 	text-align: center;
-	font-size: 21px;
+	font-size: 19px;
 	width: 960px;
 	font-weight: bold;	
 }
@@ -30,21 +30,21 @@ button {
 }
 
 #questions {
-  font-size: 23px;
+  font-size: 21px;
 }
 
 #questions2 {
-	font-size: 23px;
+	font-size: 21px;
 }
 #questions3 {
-	font-size: 23px;
+	font-size: 21px;
 }
 #questions4 {
-	font-size: 23px;
+	font-size: 21px;
 }
 
 #questions5 {
-	font-size: 23px;
+	font-size: 21px;
 }
 
 form p {
@@ -54,7 +54,12 @@ form p {
 #score {
 color: white;
 text-align: center;
-
 }
 
+#gif {
+	text-align: center;
+}
 
+html, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.ani), url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.png), progress !important;} 
+#trivia, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.ani), url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.png), progress !important;} 
+body, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.ani), url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.png), progress !important;}
