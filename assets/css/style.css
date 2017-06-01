@@ -5,6 +5,9 @@ body{
 	height: 1080px;
 	overflow: scroll;
 	width: 960px;
+	font-family: 'Marcellus SC', serif;
+
+
 }
 
 header {
@@ -12,12 +15,19 @@ header {
 	text-align: center;
 }
 
+#instructions {
+
+	background-color: red;
+	opacity: 0.6;
+}
+
 p {
 	color: white;
 	text-align: center;
-	font-size: 15px;
+	font-size: 21px;
 	width: 960px;
 	font-weight: bold;
+	
 }
 
 button {
@@ -28,12 +38,37 @@ button {
 	display: none;
 }
 
-#question {
-	height: 150px;
-	width: 200px;
+#questions {
+  font-size: 23px;
+}
+
+#questions2 {
+	font-size: 23px;
+
+}
+#questions3 {
+	font-size: 23px;
+
+}
+#questions4 {
+	font-size: 23px;
+
+}
+#questions5 {
+	font-size: 23px;
+
+}
+
+form p {
+	font-size: 19px;
 }
 
 #score {
 color: white;
+text-align: center;
 
 }
+
+html, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.ani), url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.png), progress !important;} 
+#trivia, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.ani), url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.png), progress !important;} 
+body, a:hover {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.ani), url(http://cur.cursors-4u.net/mechanics/mec-1/mec52.png), progress !important;}

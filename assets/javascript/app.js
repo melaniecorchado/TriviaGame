@@ -60,7 +60,7 @@ function start() {
 	$("#Trivia").toggleClass("hide");
 	$("#startButton").toggleClass("hide");
 
-	setTimeout(end, 1000 * 20);
+	setTimeout(end, 1000 * 10);
 }
 show();
 //function to end the game 
