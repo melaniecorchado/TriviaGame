@@ -1,12 +1,10 @@
 $(document).ready(function(){
-
+//global varaibles 
 var correctAnswer = 0; 
 var incorrectAnswer = 0; 
 
 //below you will find the questions
-
 var trivia = {
-
 	questions : 
 		{
 			question1 : "What is the name of the ship that Sparrow is trying to get back?",
@@ -16,7 +14,6 @@ var trivia = {
 			answer3: "The Black Pearl",
 			userGuess: "",			
 		},
-
 	questions2:
 		{   question2 : "Who's blood did Barbossa need to release the curse?",
 			answer : "Will Turner",
@@ -25,7 +22,6 @@ var trivia = {
 			answer23: "His Own",
 			userGuess: "",			
 		},
-
 	questions3:
 		{   question3 : "Who is the villain in Dead Man's Chest?",
 			answer : "Davy Jones",
@@ -34,7 +30,6 @@ var trivia = {
 			answer33: "Captian Barbossa", 
 			userGuess: "",		
 		},
-
 	questions4: 
 		{   question4 : "Who is Jacks right hand?",
 			answer : "Gibbs",
@@ -43,7 +38,6 @@ var trivia = {
 			answer43: "Blackbeard",
 			userGuess: "",
 		},
-
 	questions5:
 		{   question5 : "Jacks compass doesn't point in which direction?",
 			answer : "North",
@@ -52,7 +46,6 @@ var trivia = {
 			answer53: "South",
 			userGuess: "",
 		},
-
 }
 
 $("#startButton").click(function(){
@@ -62,22 +55,19 @@ $("#startButton").click(function(){
 //function to start the game
 
 function start() {
-
 	$("#Trivia").toggleClass("hide");
 	$("#startButton").toggleClass("hide");
 	setTimeout(end, 10000);
 }
-
 show();
-//function to display question 
-
+//function to end the game 
 function end(){
-	alert("game over");
+	alert("Time's up mateys!");
 	$("#Trivia").toggleClass("hide");
+	check();
 }
-
+//this is where the questions and choices willl be displayed
 function show() {
-
 	$("#questions").html(trivia.questions.question1);
 	$("#answer1").html(trivia.questions.answer1);
 	$("#answer2").html(trivia.questions.answer2);
@@ -101,8 +91,7 @@ function show() {
 	$("#questions5").html(trivia.questions5.question5);
 	$("#answer51").html(trivia.questions5.answer51);
 	$("#answer52").html(trivia.questions5.answer52);
-	$("#answer53").html(trivia.questions5.answer53);
-	
+	$("#answer53").html(trivia.questions5.answer53);	
 };
 
 function getAnswers(){
@@ -151,7 +140,6 @@ function getAnswers(){
   $("#a53").click(function(){	
   	trivia.questions.userGuess=trivia.questions.answer53;
   });
-
 }
 
 function check(){
@@ -159,26 +147,49 @@ function check(){
   	correctAnswer++;
   }
 
-  if(trivia.questions.userGuess==trivia.questions2.answer){
+  else if(trivia.questions.userGuess!=trivia.questions.answer){
+  	incorrectAnswer++;
+  }
+
+  if(trivia.questions2.userGuess==trivia.questions2.answer){
   	correctAnswer++;
   }
 
-if(trivia.questions.userGuess==trivia.questions3.answer){
+  else if(triva.questions2.userGuess!=trivia.question2.answer){
+  	incorrectAnswer++;
+  }
+
+if(trivia.questions3.userGuess==trivia.questions3.answer){
   	correctAnswer++;
   }
 
-if(trivia.questions.userGuess==trivia.questions4.answer){
+ else if(trivia.questions3.userGuess!=trivia.question3.answer){
+ 	incorrectAnswer++;
+ }
+
+if(trivia.questions4.userGuess==trivia.questions4.answer){
   	correctAnswer++;
   }
-if(trivia.questions.userGuess==trivia.questions5.answer){
+
+  else if(trivia.questions4.userGuess!=trivia.question4.answer){
+  	incorrectAnswer++;
+  }
+
+if(trivia.questions5.userGuess==trivia.questions5.answer){
   	correctAnswer++;
   }
+
+  else if(trivia.questions5.userGuess!=trivia.question5.answer){
+  	incorrectAnswer++;
+  }
+
 
 }
 
-function reset(){
-	clearInterval(intervalId);
-}
+
+//function reset(){
+//	clearInterval(intervalId);
+//}
 
 
 });

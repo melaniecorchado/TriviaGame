@@ -29,14 +29,15 @@ button {
 	margin-left: 435px;
 
 }
-
-
 .hide {
 	display: none;
 }
 
-
 #question {
 	height: 150px;
 	width: 200px;
+}
+
+#score {
+	
 }
