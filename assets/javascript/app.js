@@ -2,7 +2,8 @@ $(document).ready(function(){
 //global varaibles 
 var correctAnswer = 0; 
 var incorrectAnswer = 0; 
-//var audio =("assets/song/pirates.mp3");
+//var countDown = 20;
+var audio = new Audio ("https://raw.githubusercontent.com/melaniecorchado/TriviaGame/master/song/pirates.mp3");
 
 //below you will find the questions
 var trivia = {
@@ -51,6 +52,7 @@ var trivia = {
 
 $("#startButton").click(function(){
 	start();
+	audio.play();
 });
 
 //function to start the game
@@ -60,11 +62,10 @@ function start() {
 	setTimeout(end, 1000 * 20);
 	getAnswers();
 }
-
 show();
 //function to end the game 
 function end(){
-	alert("Time's up mateys!");
+	//alert("Time's up mateys!");
 	$("#Trivia").toggleClass("hide");
 	$("#score").toggleClass("hide");
 	console.log(correctAnswer);
@@ -77,6 +78,7 @@ function end(){
 		$("#gif").html("<img src='assets/images/scream.gif'>");
 	}
 }
+
 //this is where the questions and choices willl be displayed
 function show() {
 	$("#questions").html(trivia.questions.question1);

@@ -25,6 +25,11 @@ button {
 	margin-left: 435px;
 }
 
+#timer {
+	color:white;
+	text-align: center;
+}
+
 .hide {
 	display: none;
 }
